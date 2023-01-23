@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        #header {
+            grid-area: head;
+        }
+
+        #main {
+            grid-area: main;
+        }
+
+        #event1 {
+            grid-area: event1;
+        }
+
+        #event2 {
+            grid-area: event2;
+        }
+
+        #testimonial {
+            grid-area: test;
+        }
+
+        #footer {
+            grid-area: foot;
+        }
+
+        .new_container {
+            display: grid;
+            grid-template-areas:
+                'head head head'
+                'main main main'
+                'event1 event1 event1'
+                'event2 event2 event2'
+                'test test test'
+                'foot foot foot'
+            ;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .new_container>div {
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        #main>div {
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .ms1 {
+            grid-area: ms1;
+        }
+
+        .ma1 {
+            grid-area: ma1;
+        }
+
+        .ms2 {
+            grid-area: ms2;
+        }
+
+        #main {
+            display: grid;
+            grid-template-areas:
+                'ms1 ms1 ma1'
+                'ms2 ms2 ma1'
+            ;
+        }
+
+        #header {
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background-image: url("./images/social-media.jpeg");
+            background-repeat: no-repeat;
+            background-size: 300px 100px;
+            background-position: right;
+        }
+        #header > i {
+            font-size:50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="new_container">
+        <div id="header">
+            <i class="fa fa-graduation-cap"></i>
+            <h1>Online Learning Portal</h1>
+        </div>
+        <div id="main">
+            <div class="ms1">ms1</div>
+            <div class="ms2">ms2</div>
+            <div class="ma1">ma1</div>
+        </div>
+        <div id="event1">
+            <div id="main">
+                <div class="ms1">ms1</div>
+                <div class="ms2">ms2</div>
+                <div class="ma1">ma1</div>
+            </div>
+        </div>
+        <div id="event2">
+            <div id="main">
+                <div class="ms1">ms1</div>
+                <div class="ms2">ms2</div>
+                <div class="ma1">ma1</div>
+            </div>
+        </div>
+        <div id="testimonial">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum quae consectetur error est
+            maxime placeat sequi amet ut nemo dolor?</div>
+        <div id="footer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum quae consectetur error est
+            maxime placeat sequi amet ut nemo dolor?</div>
+    </div>
+</body>
+
+</html>
