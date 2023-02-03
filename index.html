@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- 
+    aim
+    1. Image map
+    procedure (img, usemap, map, area)
+
+ -->
+
+
+<body>
+    <div class="divcontainer">
+
+        <div class="header">
+            <nav class="header_nav">
+                <div class="nav_home nav_elements"><a href="index.html">Home</a></div>
+                <div class="nav_home_dum 1" id="bread"></div>
+                <div class="nav_pro nav_elements"><a href="project.html">Project</a></div>
+                <div class="nav_edu nav_elements"><a href="education.html">Qualification</a></div>
+                <div class="nav_contact nav_elements"><a href="contact.html">Contact</a></div>
+                <div class="nav_about nav_elements"><a href="about.html">About</a></div>
+            </nav>
+        </div>
+
+        <div class="main">
+            <div class="main_image">
+                <img src="./images/design.png" alt="coder me" usemap="#navigate" id="my_img">
+                <map name="navigate">
+                    <area title="Contact me" shape="rect" coords="130,100,210,150" alt="Contact" href="contact.html">
+                    <area title="My HTML Practices" shape="rect" coords="400,285,476,352" alt="HTML"
+                        href="practice.html">
+                    <area title="Educational Qualifications" shape="rect" coords="357,205,476,260" alt="EDU"
+                        href="education.html">
+                    <area title="My project" shape="circle" coords="445,130,43" alt="Cup of coffee" href="project.html">
+                    <area title="Mohamed Mahir" shape="poly"
+                        coords="195,163,225,145,217,80,279,80,280,140,354,167,404,146,412,172,325,209,335,251,299,385,330,405,238,430,220,392,195,163"
+                        alt="about me" href="about.html">
+
+                </map>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://github.com/Mahii143" target="_blank" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/mohamed-mahir/" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+    </div>
+    <script>
+        var img = document.getElementById('my_img');
+        var coords = document.getElementById('coords');
+        img.addEventListener('mousemove', function (event) {
+
+            coords.innerHTML = ("x: " + event.offsetX + "<br/>y: " + event.offsetY);
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
